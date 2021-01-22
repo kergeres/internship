@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/wys5vwm.css">
+</head>
+
+<body>
+    <header>
+        <p class="cim"">órából számol fizetést és fizetés + SU-t</p>
+    </header>
+    
+    <section class="big-container">
+        
+    <div>
+    <label for="d">David</label>
+    <input class="d" placeholder="óra">
+    <div class="cc">
+    <input value="mehet" class="button" onclick="calc('d')" type="submit">
+    
+    <p class="dout"></p>
+    </div>
+    </div>
+
+    <div>
+    <label for="b">Borbála</label> 
+    <input class="b" placeholder="óra">
+    <div class="cc">
+    <input value="mehet" class="button" onclick="calc('b')" type="submit"><nobr></nobr>
+    <p class="bout"></p>
+    </div>
+</div>
+
+</section>
+<div class="line"></div>
+
+<section class="overalls">
+    <p class="overalld"></p>
+<button onclick="overallcalc()" class="overallb">MEHET</button>
+</section>
+    <script src="js/main.js"></script>
+</body>
+</html>
