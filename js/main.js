@@ -1,36 +1,35 @@
-function calc(bejon)
-{
-   dnumber = document.querySelector(`.${bejon}`).value;
-   
-   if (bejon == 'd')
-   {
-      dnumbercalculeted = `${(Math.round( (parseInt(dnumber) * 110 *0.575))).toLocaleString('de-DE')} dkk`;
-      document.querySelector(".dout").innerHTML = dnumbercalculeted;
-   }
-   else 
-   {
-      dnumbercalculeted = `${(Math.round((parseInt(dnumber) * 130 *0.575))).toLocaleString('de-DE')} dkk `;
-      document.querySelector(".bout").innerHTML = dnumbercalculeted;
-   }
-   
-   
-}
+use strict";
 
-function overallcalc()
-{
-   calc('d');
-   calc('b');
-   dnumber = document.querySelector(`.d`).value;
-   bnumber = document.querySelector(`.b`).value;
-   
-   
-      dnumbercalculeted = (Math.round((parseInt(dnumber) * 110 *0.575)) +
-         Math.round((parseInt(bnumber) * 130 *0.575)) + 11108).toLocaleString('de-DE');
+// hamburger navigacio 
+let cbOpen = true;
+function hamburgerNav() {
+ 
+    if(cbOpen==false)//ha zarva van
+    {
+        document.querySelector("#nav-container").classList.remove("nav-open");
+        document.querySelector(".ham-menu-line").classList.remove("line-rot");
+        document.querySelector(".ham-menu-linea").classList.remove("linea-rot");
+        document.querySelector(".ham-menu-lineb").classList.remove("lineb-rot");
+        
+        cbOpen = true;
+    }
+    else if(cbOpen==true)
+    {
+      
+        document.querySelector("#nav-container").classList.add("nav-open");
+        document.querySelector(".ham-menu-line").classList.add("line-rot");
+        document.querySelector(".ham-menu-linea").classList.add("linea-rot");
+        document.querySelector(".ham-menu-lineb").classList.add("lineb-rot");
 
-         let dnumFT = (dnumbercalculeted*48.5).toLocaleString('de-DE');
 
-      document.querySelector(".overalld").innerHTML = `${dnumbercalculeted} DKK <br> ${dnumFT} FT`;
-   
-   
-   
-}
+        document.querySelector(".menu-point-cont").addEventListener('click', function() {
+          document.querySelector("#nav-container").classList.remove("nav-open");
+          document.querySelector(".ham-menu-line").classList.remove("line-rot");
+          document.querySelector(".ham-menu-linea").classList.remove("linea-rot");
+          document.querySelector(".ham-menu-lineb").classList.remove("lineb-rot");
+          cbOpen = true;
+        });
+        cbOpen = false;
+    }  
+  }
+ 
